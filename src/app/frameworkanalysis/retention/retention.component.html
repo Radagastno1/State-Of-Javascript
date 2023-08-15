@@ -7,8 +7,6 @@
     </div>
   </div>
 
-
- 
   <div *ngFor="let framework of retentionData">
 
     <div class="row-div" data-cy="chart-row">
@@ -17,12 +15,13 @@
         <h4>{{ framework.name }}</h4>
       </div>
 
+        <div class="line-div"  *ngFor="let year of years; let i = index">
 
-        <div class="line-div"  *ngFor="let survey of framework.surveys; let i = index"
-        [style.--position]="i / (framework.surveys.length - 1)"
-      >
-
-          <div class="data" data-cy="chart-cell">{{survey.retention}}</div>
+          <div [ngClass]="{'data': getSurveyOfYear(year, framework) !== null, 'empty': getSurveyOfYear(year, framework) === null}"
+       data-cy="chart-cell"
+       [style.left.%]="(i / (years.length - 1)) * 87">
+              {{getSurveyOfYear(year, framework)}}
+             </div>
 
         </div> 
 
