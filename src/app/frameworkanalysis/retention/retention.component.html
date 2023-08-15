@@ -1,5 +1,7 @@
 <app-common-layout>
     <!-- Specifikt innehåll för RetentionComponent -->
     <h1>Retention Innehåll</h1>
-    <p>retention works!</p>
+    <div *ngFor="let framework of retentionData">
+        <h2>{{ framework.name }}</h2>
+      </div>
 </app-common-layout>

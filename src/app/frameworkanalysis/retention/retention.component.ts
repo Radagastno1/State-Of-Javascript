@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { frameworks } from 'data';
 
 @Component({
   selector: 'app-retention',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./retention.component.css']
 })
 export class RetentionComponent {
-
+  retentionData = frameworks;
 }
