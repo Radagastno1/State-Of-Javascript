@@ -4,13 +4,15 @@ import { RetentionComponent } from './retention/retention.component';
 import { InterestComponent } from './interest/interest.component';
 import { UsageComponent } from './usage/usage.component';
 import { AwarenessComponent } from './awareness/awareness.component';
+import { CommonLayoutComponent } from './common-layout/common-layout.component';
 
 @NgModule({
   declarations: [
     RetentionComponent,
     InterestComponent,
     UsageComponent,
-    AwarenessComponent
+    AwarenessComponent,
+    CommonLayoutComponent
   ],
   imports: [
     CommonModule
