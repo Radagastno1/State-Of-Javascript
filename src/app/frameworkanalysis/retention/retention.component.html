@@ -1,10 +1,12 @@
 <app-common-layout>
   <!-- Specifikt innehåll för RetentionComponent -->
 
-  <div  class="years-div">
-    <div *ngFor="let year of years">
+  <div  class="years-div" data-cy="chart-header">
+    <div class="year-text"></div>
+    <div *ngFor="let year of getUniqueYears()">
       <h4 class="year-text">{{year}}</h4>
     </div>
+    <div class="year-text"></div>
   </div>
 
   <div *ngFor="let framework of retentionData">
@@ -12,21 +14,21 @@
     <div class="row-div" data-cy="chart-row">
 
       <div class="name-div-left">
-        <h4>{{ framework.name }}</h4>
+        <h4 [style.color]="framework.color">{{ framework.name }}</h4>
       </div>
 
-        <div class="line-div"  *ngFor="let year of years; let i = index">
+        <div class="line-div" [style.backgroundColor]="framework.color"  *ngFor="let year of getUniqueYears(); let i = index">
 
           <div [ngClass]="{'data': getSurveyOfYear(year, framework) !== null, 'empty': getSurveyOfYear(year, framework) === null}"
        data-cy="chart-cell"
-       [style.left.%]="(i / (years.length - 1)) * 87">
+       [style.left.%]="(i / (getUniqueYears().length - 1)) * 87"  [style.borderColor]="framework.color">
               {{getSurveyOfYear(year, framework)}}
              </div>
 
         </div> 
 
       <div class="name-div-right">
-        <h4>{{ framework.name }}</h4>
+        <h4 [style.color]="framework.color">{{ framework.name }}</h4>
       </div>
 
     </div>

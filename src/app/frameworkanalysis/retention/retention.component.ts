@@ -8,13 +8,21 @@ import { Framework, frameworks } from 'data';
 })
 export class RetentionComponent {
   retentionData = frameworks;
-   years = frameworks[0].surveys.map(survey => survey.year);
+
+  getUniqueYears() {
+    const allYears = this.retentionData.flatMap(framework =>
+      framework.surveys.map(survey => survey.year)
+    );
+    const uniqueYears = Array.from(new Set(allYears));
+    console.log(uniqueYears);
+    return uniqueYears;
+  }
 
    getSurveyOfYear(year:number, framework:Framework){
     const foundFramework = frameworks.find(f => f.name == framework.name);
     const surveyAtSpecificYear = foundFramework?.surveys.find(s => s.year == year);
     if(surveyAtSpecificYear){
-      return surveyAtSpecificYear.retention;
+      return surveyAtSpecificYear.retention + "%";
     }
     else{
       return null;

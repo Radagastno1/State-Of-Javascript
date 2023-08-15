@@ -33,16 +33,15 @@ main{
 
 .name-div-right{
     padding: 2rem;
-    margin-left: 400px;
+    margin-left: 200px;
     position: relative; 
 }
-
 
 .row-div {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(61, 136, 136);
+    background-color: rgb(46, 48, 48);
   }
 
   .line-div {
@@ -56,13 +55,14 @@ main{
   }
   
   .data {
-    background-color: rgb(61, 136, 136);
+    background-color: rgb(46, 48, 48);
     border-radius: 50%;
     border: 2px solid white;
     padding: 0;
     margin: 1rem;
     color: white; 
-    font-weight: bold;
+    font-weight: lighter;
+    font-size: smaller;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@ main{
   }
   
   .data.empty {
-    background-color: rgb(61, 136, 136);
+    background-color: rgb(46, 48, 48);
     border-radius: 50%;
     border: 2px solid transparent;
     padding: 0;
