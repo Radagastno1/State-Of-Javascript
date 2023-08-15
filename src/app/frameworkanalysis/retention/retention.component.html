@@ -1,15 +1,29 @@
 <app-common-layout>
   <!-- Specifikt innehåll för RetentionComponent -->
-  <h1>Retention Innehåll</h1>
+
+  <div  class="years-div">
+    <div *ngFor="let year of years">
+      <h4 class="year-text">{{year}}</h4>
+    </div>
+  </div>
+
+
+ 
   <div *ngFor="let framework of retentionData">
-    <div class="row-div">
+
+    <div class="row-div" data-cy="chart-row">
 
       <div class="name-div-left">
         <h4>{{ framework.name }}</h4>
       </div>
 
-        <div class="line-div">
-          <div class="data">data</div>
+
+        <div class="line-div"  *ngFor="let survey of framework.surveys; let i = index"
+        [style.--position]="i / (framework.surveys.length - 1)"
+      >
+
+          <div class="data" data-cy="chart-cell">{{survey.retention}}</div>
+
         </div> 
 
       <div class="name-div-right">

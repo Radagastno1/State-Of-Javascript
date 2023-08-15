@@ -17,16 +17,23 @@ main{
     color: white;
 }
 
+.years-div{
+    display: flex;  
+}
+.year-text{
+    margin: 20px;
+}
+
 .name-div-left{
     padding: 2rem;
-    margin-right: 250px;
+    margin-right: 300px;
   position: relative; 
 }
 
 
 .name-div-right{
     padding: 2rem;
-    margin-left: 250px;
+    margin-left: 300px;
   position: relative; 
 }
 
@@ -45,6 +52,7 @@ main{
     width: 500px;
     display: flex;
     align-items: center; 
+    justify-content: space-between;
   }
   
   .data {
@@ -52,7 +60,7 @@ main{
     border-radius: 50%;
     border: 2px solid white;
     padding: 0.5rem 1rem;
-    margin: 0 1rem; 
+    margin: 1rem;
     color: white; 
     font-weight: bold;
     display: flex;
@@ -60,6 +68,9 @@ main{
     justify-content: center;
     width: 40px;
     height: 40px;
+    position: relative;
+    left: calc(var(--position) * 100%);
+    z-index: 1;
   }
   
 

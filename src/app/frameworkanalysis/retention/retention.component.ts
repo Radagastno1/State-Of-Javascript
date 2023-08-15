@@ -8,4 +8,5 @@ import { frameworks } from 'data';
 })
 export class RetentionComponent {
   retentionData = frameworks;
+   years = frameworks[0].surveys.map(survey => survey.year);
 }
