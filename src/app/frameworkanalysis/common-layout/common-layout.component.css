@@ -5,7 +5,106 @@ header{
     align-items: center;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .h1-div{
     margin: 1rem;
     color: white;
 }
+
+.name-div-left{
+    padding: 2rem;
+    margin-right: 250px;
+  position: relative; 
+}
+
+
+.name-div-right{
+    padding: 2rem;
+    margin-left: 250px;
+  position: relative; 
+}
+
+
+.row-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(61, 136, 136);
+  }
+
+  .line-div {
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 500px;
+    display: flex;
+    align-items: center; 
+  }
+  
+  .data {
+    background-color: rgb(61, 136, 136);
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem; 
+    color: white; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+   
+    main{
+        overflow-x: hidden;
+    }
+
+    .line-div {
+        width: 250px;
+      }
+
+  }
+  
+  @media screen and (max-width: 480px) {
+    main{
+        overflow-x: hidden;
+    }
+
+    .name-div{
+        padding: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .line-div {
+        width: 150px;
+      }
+      
+      .data {
+        width: 30px;
+        height: 30px;
+      }
+
+      .name-div-left{
+        padding: 2rem;
+        margin-right: 50px;
+      position: relative; 
+    }
+    
+    
+    .name-div-right{
+        padding: 2rem;
+        margin-left: 50px;
+      position: relative; 
+    }
+  }

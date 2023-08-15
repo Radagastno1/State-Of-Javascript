@@ -4,7 +4,7 @@ import { frameworks } from 'data';
 @Component({
   selector: 'app-retention',
   templateUrl: './retention.component.html',
-  styleUrls: ['./retention.component.css']
+  styleUrls: ['../common-layout/common-layout.component.css']
 })
 export class RetentionComponent {
   retentionData = frameworks;

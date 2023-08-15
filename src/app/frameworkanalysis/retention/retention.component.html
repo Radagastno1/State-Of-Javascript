@@ -1,7 +1,21 @@
 <app-common-layout>
-    <!-- Specifikt innehåll för RetentionComponent -->
-    <h1>Retention Innehåll</h1>
-    <div *ngFor="let framework of retentionData">
-        <h2>{{ framework.name }}</h2>
+  <!-- Specifikt innehåll för RetentionComponent -->
+  <h1>Retention Innehåll</h1>
+  <div *ngFor="let framework of retentionData">
+    <div class="row-div">
+
+      <div class="name-div-left">
+        <h4>{{ framework.name }}</h4>
       </div>
+
+        <div class="line-div">
+          <div class="data">data</div>
+        </div> 
+
+      <div class="name-div-right">
+        <h4>{{ framework.name }}</h4>
+      </div>
+
+    </div>
+  </div>
 </app-common-layout>
