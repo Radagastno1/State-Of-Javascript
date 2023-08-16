@@ -51,11 +51,18 @@ main{
     width: 500px;
     display: flex;
     align-items: center; 
-    /* justify-content: space-between; */
     border-radius: 2px;
-    /* z-index: -1; */
+    z-index: -10;
   }
   
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    position: relative;
+  }
+
   .data {
     background-color: white;
     border-radius: 50%;
@@ -71,14 +78,15 @@ main{
     width: 40px;
     height: 40px;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
 
-  .data.empty {
-    background-color: white;
+
+  .empty {
+    /* background-color: white; */
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 2px solid transparent !important;
     padding: 0;
     margin: 1rem;
     color: white; 
@@ -95,46 +103,58 @@ main{
 
   @media screen and (max-width: 768px) {
    
-    main{
-        overflow-x: hidden;
-    }
-
-    .line-div {
-        width: 250px;
-      }
+ 
 
   }
   
   @media screen and (max-width: 480px) {
-    main{
-        overflow-x: hidden;
-    }
-
-    .name-div{
-        padding: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+ 
+  .year-text{
+      margin: 2px;
+      font-size: small;
+  }
+  
+  .name-div-left{
+      padding: 0.5rem;
+      margin-right: 120px;
+  }
+  
+  .name-div-right{
+      padding: 0.5rem;
+      margin-left: 70px;
+  }
+   
     .line-div {
-        width: 150px;
-      }
-      
-      .data {
-        width: 30px;
-        height: 30px;
-      }
+      height: 2px;
+      width: 210px;
+    }
+    
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      width: 100%;
+      position: relative;
+    }
+  
+    .data {
+      margin: 0.2rem;
+      font-size: 8px;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      /* z-index: 1; */
+    }
+  
+  
+    .empty {
+      margin: 0.2rem;
+      font-size: 8px;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      /* z-index: 1; */
+    }
+    
 
-      .name-div-left{
-        padding: 2rem;
-        margin-right: 50px;
-      position: relative; 
-    }
-    
-    
-    .name-div-right{
-        padding: 2rem;
-        margin-left: 50px;
-      position: relative; 
-    }
   }

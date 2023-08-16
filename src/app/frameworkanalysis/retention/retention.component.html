@@ -17,19 +17,24 @@
         <h4>{{ framework.name }}</h4>
       </div>
 
-        <div class="line-div" data-cy="row-line" [style.backgroundColor]="framework.color"  *ngFor="let year of getUniqueYears(); let i = index">
+        <div class="line-div" data-cy="row-line" [style.backgroundColor]="framework.color" >
 
-          <div [ngClass]="{'data': getSurveyOfYear(year, framework) !== null, 'empty': getSurveyOfYear(year, framework) === null}"
-          data-cy="chart-cell"
-          [style.left.%]="(i / (getUniqueYears().length - 1)) * 87"
-          [style.borderColor]="framework.color"
-         >
-      
-        <div *ngIf="getSurveyOfYear(year, framework) !== null" data-cy="chart-circle" class="chart-circle" [style.color]="framework.color" >{{getSurveyOfYear(year, framework)}}</div>
-     </div>
-     
-
-        </div> 
+          <div class="flex-container">
+            <div
+            *ngFor="let year of getUniqueYears(); let i = index"
+            [ngClass]="{'data': getSurveyOfYear(year, framework) !== null, 'empty': getSurveyOfYear(year, framework) === null}"
+            data-cy="chart-cell"
+            [style.borderColor]="framework.color"
+          >
+          <div
+          *ngIf="getSurveyOfYear(year, framework) !== null"
+          data-cy="chart-circle"
+          class="chart-circle"
+          [style.color]="framework.color"
+        >{{getSurveyOfYear(year, framework)}}</div>
+    </div>
+  </div>
+</div>
 
       <div class="name-div-right"  data-cy="chart-cell"  [style.color]="framework.color">
         <h4>{{ framework.name }}</h4>
