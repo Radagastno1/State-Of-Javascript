@@ -1,8 +1,9 @@
 header{
-    background-color: rgb(16, 16, 16);
+    background-image: linear-gradient(to right, rgb(10, 10, 10), rgb(23, 23, 23), #1f1e1e);
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 10px 1px 40px   rgb(51, 50, 50);
 }
 
 main{
@@ -106,7 +107,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #080808;
+    background-color: rgb(23, 23, 23);
   }
 
   .footer-container{
@@ -122,7 +123,7 @@ main{
   }
 
   footer a.active-link{
-    background-color: #161515;
+    background-color: #0a0a0a;
   }
 
   /* delade regler */
