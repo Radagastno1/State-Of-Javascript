@@ -14,7 +14,7 @@ main{
 
 .h1-div{
     margin: 1rem;
-    color: white;
+    color: #ffffff;
 }
 
 .years-div{
@@ -41,23 +41,25 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(46, 48, 48);
+    /* background-color: rgb(46, 48, 48); */
   }
 
   .line-div {
     position: absolute;
     background-color: white;
-    height: 2px;
+    height: 3px;
     width: 500px;
     display: flex;
     align-items: center; 
     /* justify-content: space-between; */
+    border-radius: 2px;
+    /* z-index: -1; */
   }
   
   .data {
-    background-color: rgb(46, 48, 48);
+    background-color: white;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 3px solid white;
     padding: 0;
     margin: 1rem;
     color: white; 
@@ -66,14 +68,15 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     position: relative;
     z-index: 1;
   }
-  
+
+
   .data.empty {
-    background-color: rgb(46, 48, 48);
+    background-color: white;
     border-radius: 50%;
     border: 2px solid transparent;
     padding: 0;
@@ -83,10 +86,10 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
   }
   
 
