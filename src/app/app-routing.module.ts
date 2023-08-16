@@ -6,7 +6,7 @@ import { UsageComponent } from './frameworkanalysis/usage/usage.component';
 import { AwarenessComponent } from './frameworkanalysis/awareness/awareness.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'retention', pathMatch: 'full' }, // Redirect to /retention on the home page
+  { path: '', redirectTo: 'retention', pathMatch: 'full' }, 
   { path: 'retention', component: RetentionComponent },  
   { path: 'interest', component: InterestComponent },
   { path: 'usage', component: UsageComponent },
