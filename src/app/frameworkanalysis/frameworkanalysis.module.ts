@@ -5,6 +5,7 @@ import { InterestComponent } from './interest/interest.component';
 import { UsageComponent } from './usage/usage.component';
 import { AwarenessComponent } from './awareness/awareness.component';
 import { CommonLayoutComponent } from './common-layout/common-layout.component';
+import { RouterModule } from '@angular/router'; 
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CommonLayoutComponent } from './common-layout/common-layout.component';
     CommonLayoutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class FrameworkanalysisModule { }
