@@ -25,42 +25,25 @@ export class FrameworkManagerService {
     const foundFramework = frameworks.find(f => f.name == framework.name);
     const surveyAtSpecificYear = foundFramework?.surveys.find(s => s.year == year);
     
-    if (dataType === 'retention') {
-      if(surveyAtSpecificYear){
-        return surveyAtSpecificYear.retention + "%";
-      }
-      else{
-        return null;
-      }
-     
-    } else if (dataType === 'interest') {
-      if(surveyAtSpecificYear){
-        return surveyAtSpecificYear.interest + "%";
-      }
-      else{
-        return null;
-      }
-    
-    }
-    else if(dataType === 'usage'){
-      if(surveyAtSpecificYear){
-        return surveyAtSpecificYear.usage + "%";
-      }
-      else{
-        return null;
-      }
+    let returnData;
 
+    switch (dataType) {
+      case 'retention':
+        returnData = surveyAtSpecificYear?.retention ? surveyAtSpecificYear.retention + "%" : null;
+      break;
+      case 'interest':
+        returnData = surveyAtSpecificYear?.interest ? surveyAtSpecificYear.interest + "%" : null;
+        break;
+      case 'usage':
+        returnData = surveyAtSpecificYear?.usage ? surveyAtSpecificYear.usage + "%" : null;
+        break;
+      case 'awareness':
+        returnData = surveyAtSpecificYear?.awareness ? surveyAtSpecificYear.awareness + "%" : null;
+        break;
+      default:
+        returnData = null;
     }
-    else if(dataType === 'awareness'){
-      if(surveyAtSpecificYear){
-        return surveyAtSpecificYear.awareness + "%";
-      }
-      else{
-        return null;
-      }
 
-    }
-    return null;
+    return returnData;
   }
-
 }
