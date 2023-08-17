@@ -1,7 +1,7 @@
 /* allt som har med header att göra */
 
 header{
-    background-image: linear-gradient(to right, rgb(10, 10, 10), rgb(23, 23, 23), #1f1e1e);
+    background-image: linear-gradient(to right, rgb(10, 10, 10), rgb(40, 39, 39), #1f1e1e);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,29 +139,26 @@ main{
     font-family: "Bebas Neue", "IBM Plex Mono", monospace;
   }
 
-  /* allt som har med tablet och mobile att göra */
-
-  @media screen and (max-width: 768px) {
-   
- 
-
-  }
+  /* allt som har med mobile att göra */
   
   @media screen and (max-width: 480px) {
  
+    h4{
+      font-size: 15px;
+    }
   .year-text{
-      margin: 2px;
-      font-size: small;
+      margin: 4px;
+      font-size: 10px;
   }
   
   .name-div-left{
       padding: 0.5rem;
-      margin-right: 120px;
+      margin-right: 130px;
   }
   
   .name-div-right{
       padding: 0.5rem;
-      margin-left: 70px;
+      margin-left: 80px;
   }
    
     .line-div {
@@ -178,11 +175,12 @@ main{
     }
   
     .data {
-      margin: 0.2rem;
+      margin: 0.3rem;
       font-size: 8px;
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
       position: relative;
+      border: 2px solid white;
     }
   
     .empty {
