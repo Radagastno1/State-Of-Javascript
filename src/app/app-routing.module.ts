@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CommonLayoutComponent } from './frameworkanalysis/common-layout/common-layout.component';
+import { ChartComponent } from './chart/chart.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'retention', pathMatch: 'full' }, 
-  { path: ':type', component: CommonLayoutComponent }
+  { path: '', redirectTo: 'retention', pathMatch: 'full' },
+  { path: ':type', component: ChartComponent } 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+  ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

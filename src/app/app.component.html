@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<header>
+    <h1 class="h1-div">State of Javascript</h1>
+    </header>
+    <main>
+        <chart-layout [dataType]="getCurrentDataType()"></chart-layout>
+            <div class="fillout-div"></div>
+    </main>
+    <footer>
+            <nav> 
+                    <a routerLink="/retention" routerLinkActive="active-link">Retention</a>
+                    <a routerLink="/interest" routerLinkActive="active-link">Interest</a>
+                    <a routerLink="/usage" routerLinkActive="active-link">Usage</a>
+                    <a routerLink="/awareness" routerLinkActive="active-link">Awareness</a>
+            </nav>
+    </footer>
+
+  

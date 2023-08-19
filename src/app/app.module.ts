@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FrameworkanalysisModule } from './frameworkanalysis/frameworkanalysis.module';
 
+import { CommonModule } from '@angular/common';
+import { RouterModule, provideRouter, withComponentInputBinding } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FrameworkanalysisModule
+    CommonModule,
+    RouterModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+
+  ],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

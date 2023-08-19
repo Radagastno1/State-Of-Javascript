@@ -1,0 +1,118 @@
+.chart-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.years-container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.year-div{
+  margin: 0.5rem 0.7rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(96, 95, 95, 0.7);
+  color: rgba(6, 6, 6, 0.9); 
+}
+
+.framework-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-div{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.line-div {
+  position: absolute;
+  height: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  z-index: -10;
+}
+
+.spacer{
+  position: relative;
+  min-width: 13rem; 
+}
+
+.name-div{
+  flex: 1;
+  text-align: center; 
+  margin: 0rem 0.5rem;
+  position: relative;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.data {
+  background-color: #1f1e1e;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0rem 0.8rem;
+  color: white;
+  font-weight: lighter;
+  font-size: smaller;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.empty {
+  border-radius: 50%;
+  border: 2px solid transparent !important;
+  margin: 0rem 0.8rem;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+
+@media (max-width:768px){
+  
+  .spacer{
+    min-width: 7rem; 
+  }
+
+  .data, .empty  {
+    margin: 0rem 0.22rem;
+    width: 25px;
+    height: 25px;
+  }
+
+  .year-div{
+    margin: 0.3rem;
+    font-size: 10px;
+  }
+  
+  .name-div, .data{
+    font-size: 10px;
+  }
+  
+}

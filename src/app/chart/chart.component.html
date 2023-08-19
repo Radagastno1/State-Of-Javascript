@@ -1,0 +1,72 @@
+<div class="chart-container">
+  <div class="years-container" data-cy="chart-header">
+    <div class="year-div"></div>
+    <div *ngFor="let year of getUniqueYears()">
+      <h4 class="year-div">{{ year }}</h4>
+    </div>
+    <div class="year-div"></div>
+  </div>
+
+  <div class="framework-container">
+    <div *ngFor="let framework of frameworkData">
+      <div class="row-div" data-cy="chart-row">
+        <div
+          class="name-div"
+          data-cy="chart-cell"
+          [style.color]="framework.color"
+        >
+          <h4>{{ framework.name }}</h4>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div
+          class="line-div"
+          data-cy="row-line"
+          [style.backgroundColor]="framework.color"
+        >
+          <div class="flex-container">
+            <div
+              *ngFor="let year of getUniqueYears(); let i = index"
+              [ngClass]="{
+                data: getSurveyOfYear(year, framework) !== null,
+                empty: getSurveyOfYear(year, framework) === null
+              }"
+              data-cy="chart-cell"
+              [style.borderColor]="framework.color"
+            >
+              <div
+                *ngIf="getSurveyOfYear(year, framework) !== null"
+                data-cy="chart-circle"
+                class="chart-circle"
+                [style.color]="framework.color"
+              >
+                {{ getSurveyOfYear(year, framework) }}
+              </div>
+            </div>
+          </div>
+
+          <!-- line diven -->
+        </div>
+
+        <div class="spacer"></div>
+
+        <div
+          class="name-div"
+          data-cy="chart-cell"
+          [style.color]="framework.color"
+        >
+          <h4>{{ framework.name }}</h4>
+        </div>
+
+        <!-- row diven -->
+      </div>
+
+      <!-- ngfor diven -->
+    </div>
+
+    <!-- framework container -->
+  </div>
+
+  <!-- chartcontainer -->
+</div>

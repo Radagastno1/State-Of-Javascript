@@ -1,0 +1,59 @@
+
+/* allt som har med header att göra */
+
+header{
+    background-image: linear-gradient(to right, rgb(10, 10, 10), rgb(40, 39, 39), #1f1e1e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 1px 40px   rgb(51, 50, 50);
+    font-size: 12px;
+}
+.h1-div{
+  margin: 1rem;
+  color: #ffffff;
+}
+
+/* allt som har med enbart main att göra */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#1f1e1e;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+ /* allt som har  med footer att göra */
+ footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(23, 23, 23);
+    width: 100%;
+  }
+
+  nav{
+    width: 100vh;
+    margin-top: 0.9rem;
+    margin-bottom: 0.9rem ;
+    display: flex;
+    justify-content: space-evenly; 
+  }
+
+  footer a{
+    padding: 0.4rem 0.6rem;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-size: 12px;
+  }
+
+  footer a.active-link{
+    background-color: #0a0a0a;
+  }
+
+ 
