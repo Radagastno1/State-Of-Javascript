@@ -1,71 +1,72 @@
-
 /* allt som har med header att göra */
 
-header{
-    background-image: linear-gradient(to right, rgb(10, 10, 10), rgb(40, 39, 39), #1f1e1e);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 10px 1px 40px   rgb(51, 50, 50);
-    font-size: 12px;
+header {
+  background-image: linear-gradient(
+    to right,
+    rgb(10, 10, 10),
+    rgb(40, 39, 39),
+    #1f1e1e
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 1px 40px rgb(51, 50, 50);
+  font-size: 12px;
+  height: 10vh;
 }
-.h1-div{
+
+.h1-div {
   margin: 1rem;
   color: #ffffff;
 }
 
 /* allt som har med enbart main att göra */
 
-main{
-  flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:#1f1e1e;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1e1e;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 80vh;
 }
 
- /* allt som har  med footer att göra */
- footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:#1f1e1e;
-    width: 100%;
-    flex: 1;
-    }
-
-  nav{
-    display: flex;
-    width: 50%;
-    margin-top: 0.2rem;
-    margin-bottom: 0.4rem;
-    display: flex;
-    justify-content: space-around; 
-  }
-
-  footer a{
-    padding: 0.4rem 0.6rem;
-    background-color: #0a0a0aa1;
-    color: white;
-    font-size: 12px;
-  }
-
-  footer a.active-link{
-    background-color: #363636a1;
-  }
-
-  footer a:hover{
-    background-color: #363636a1;
-  }
-
- .fillout-div{
+/* allt som har  med footer att göra */
+footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1e1e;
   width: 100%;
-  background-color: antiquewhite;
-  flex-grow: 1;
- }
+  height: 10vh;
+}
+
+nav {
+  display: flex;
+  width: 50%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer a {
+  padding: 0.4rem 0.6rem;
+  background-color: #0a0a0aa1;
+  color: white;
+  font-size: 13px;
+}
+
+footer a.active-link {
+  background-color: #363636a1;
+}
+
+footer a:hover {
+  background-color: #363636a1;
+}

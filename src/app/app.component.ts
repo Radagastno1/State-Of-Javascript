@@ -9,16 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
   title = 'State of Javascript';
   
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor() {}
 
-  getCurrentDataType(): string {
-    let dataType = 'retention'; 
-    const segments = this.router.routerState.snapshot.url.split('/').filter(segment => segment.length > 0);
-    
-    if (segments.length > 0) {
-      dataType = segments[0];
-    }
-    
-    return dataType;
-  }
+ 
 }

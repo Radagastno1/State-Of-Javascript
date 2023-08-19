@@ -2,7 +2,10 @@
     <h1 class="h1-div">State of Javascript</h1>
     </header>
     <main>
-        <chart-layout [dataType]="getCurrentDataType()"></chart-layout>
+        <!-- router outlet istället för chart component, annars är inte chart component beroende av 
+        en ny url. nu säger vi: när url ändras så ska visa relevanta componenten så nu är chart comopnent beroende
+    av url:en som det ska vara -->
+        <router-outlet></router-outlet> 
     </main>
     <footer>
             <nav> 
@@ -11,7 +14,6 @@
                     <a routerLink="/usage" routerLinkActive="active-link">Usage</a>
                     <a routerLink="/awareness" routerLinkActive="active-link">Awareness</a>
             </nav>
-
             <div class="fillout-div"></div>
     </footer>
 

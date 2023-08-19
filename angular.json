@@ -5,6 +5,11 @@
   "projects": {
     "angularproject": {
       "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "displayBlock": false
+        }
+      },
       "schematics": {},
       "root": "",
       "sourceRoot": "src",

@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Framework, frameworks } from 'data';
 
 @Component({
@@ -7,9 +8,22 @@ import { Framework, frameworks } from 'data';
   styleUrls: ['./chart.component.css'],
 })
 
-export class ChartComponent{
+export class ChartComponent implements OnInit{
 
-  @Input() dataType: string = ''; 
+  dataType: string = 'retention';
+
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    // här prenumererar vi på ändringar i urlen och sätter datatype till nya param
+    this.route.paramMap.subscribe(params => {
+      const type = params.get('type');
+      if (type) {
+        this.dataType = type;
+        console.log(this.dataType);
+      }
+    });
+  }
   
   frameworkData = frameworks;
 
