@@ -17,6 +17,7 @@ header{
 /* allt som har med enbart main att göra */
 
 main{
+  flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,29 +32,40 @@ main{
  /* allt som har  med footer att göra */
  footer{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(23, 23, 23);
+    background-color:#1f1e1e;
     width: 100%;
-  }
+    flex: 1;
+    }
 
   nav{
-    width: 100vh;
-    margin-top: 0.9rem;
-    margin-bottom: 0.9rem ;
     display: flex;
-    justify-content: space-evenly; 
+    width: 50%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: space-around; 
   }
 
   footer a{
     padding: 0.4rem 0.6rem;
-    background-color: rgb(34, 34, 34);
+    background-color: #0a0a0aa1;
     color: white;
     font-size: 12px;
   }
 
   footer a.active-link{
-    background-color: #0a0a0a;
+    background-color: #363636a1;
   }
 
- 
+  footer a:hover{
+    background-color: #363636a1;
+  }
+
+ .fillout-div{
+  width: 100%;
+  background-color: antiquewhite;
+  flex-grow: 1;
+ }
