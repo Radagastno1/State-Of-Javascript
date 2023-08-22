@@ -1,9 +1,23 @@
 .chart-container {
   width: 100%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center; 
   align-items: center;
+  position: relative;
+  width: 650px;
+  overflow: auto;
+  white-space: nowrap;
+  padding-left: 1rem;
+}
+
+.chart-container::-webkit-scrollbar {
+  display: none;
+}
+.chart-container {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
 }
 
 .years-container{
@@ -43,9 +57,11 @@
   z-index: -10;
 }
 
+/* jag förstår att denna lösningen att sätta en fast vidd för att få namnen att hamna utanför linjen
+INTE är en optimal lösning för om tex man utökar med mer data så måste man gå in och öka denna vidd.  */
 .spacer{
   position: relative;
-  min-width: 13rem; 
+  width: 13rem; 
 }
 
 .name-div{
@@ -93,12 +109,25 @@
 }
 
 
-@media (max-width:768px){
+@media (max-width:1040px){
 
-  .spacer{
-    min-width: 7rem; 
+  .chart-container {
+    width: 400x;
   }
 
+  .spacer{
+    width: 15rem;
+  }
+}
+
+@media (max-width:768px){
+
+  .chart-container {
+    width: 300px;
+  }
+  .spacer{
+    width: 7rem;  
+  }
   .data, .empty  {
     margin: 0rem 0.22rem;
     width: 25px;
@@ -114,4 +143,10 @@
     font-size: 10px;
   }
   
+}
+
+@media (max-height: 550px) {
+  .chart-container {
+    padding-top: 12rem;
+  }
 }

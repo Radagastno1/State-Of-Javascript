@@ -8,7 +8,7 @@ import { Framework, frameworks } from 'data';
   styleUrls: ['./chart.component.css'],
 })
 
-export class ChartComponent implements OnInit{
+export class ChartComponent{
 
   dataType: string = 'retention';
 
@@ -20,7 +20,6 @@ export class ChartComponent implements OnInit{
       const type = params.get('type');
       if (type) {
         this.dataType = type;
-        console.log(this.dataType);
       }
     });
   }

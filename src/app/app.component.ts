@@ -8,8 +8,4 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'State of Javascript';
-  
-  constructor() {}
-
- 
 }

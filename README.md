@@ -41,23 +41,31 @@ Kodprojektet ska zippas ihop och lämnas in på läroplattformen. Presentationen
 
 **Inlämningen skall alltså bestå av en zippad mapp och en PDF.**
 
+### Vad man bör veta när man ska jobba i projektet:
+I app modulen finns det två komponenter, app-komponenten och chart-komponenten.
+App-komponenten är en dumb/presentation component som använder sig av router-outlet i html-filen
+för att rendera chart-komponenten beroende på url:en.
+Chart-komponenten är en smart component då den tex. hämtar data (framworks från data mappen),
+manipulerar datan genom funktionen som returnerar unika år baserat på datan. Chart-komponenten prenumerar också på ändringar i URL så den hanterar lite mer komplex routing. En viss enkel typ av tillståndshantering då den håller koll på dataType - värdet som ändras beroende på url (användarinteraktion typ då).
+
+Global css i style.css och sedan har varke komponent sin css-klass.
 ### Krav för Godkänt
 
 - [ ] Uppgiften har lämnats in i tid (Kod & Presentation).
 - [ ] Readmefilen har uppdaterats enligt beskrivning ovan.
-- [ ] Git och GitHub har använts.
-- [ ] Sidan innehåller en header, footer och main.
-- [ ] Sidan är responsiv.
-- [ ] Sidan visar "retention" informationen som finns i [data filen](./data/index.js) i enlighet med bilden ovan.
+- [X] Git och GitHub har använts.
+- [X] Sidan innehåller en header, footer och main.
+- [X] Sidan är responsiv.
+- [X] Sidan visar "retention" informationen som finns i [data filen](./data/index.js) i enlighet med bilden ovan.
 
 _Gjorda krav ska kryssas för._
 
 ### Krav för Väl Godkänt
 
-- [ ] Sidan använder klient-routing för att gå till /retention när användaren besöker startsidan.
-- [ ] Sidan använder klient-routing för att gå till /retention när användaren klickar på länken i footern.
-- [ ] Sidan använder klient-routing för att gå till /interest när användaren klickar på länken i footern.
-- [ ] Sidan använder klient-routing för att gå till /usage när användaren klickar på länken i footern.
-- [ ] Sidan använder klient-routing för att gå till /awareness när användaren klickar på länken i footern.
+- [X] Sidan använder klient-routing för att gå till /retention när användaren besöker startsidan.
+- [X] Sidan använder klient-routing för att gå till /retention när användaren klickar på länken i footern.
+- [X] Sidan använder klient-routing för att gå till /interest när användaren klickar på länken i footern.
+- [X] Sidan använder klient-routing för att gå till /usage när användaren klickar på länken i footern.
+- [X] Sidan använder klient-routing för att gå till /awareness när användaren klickar på länken i footern.
 
 _Gjorda krav ska kryssas för._
