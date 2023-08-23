@@ -1,6 +1,6 @@
 .chart-container {
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -43,13 +43,14 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
+  justify-content: center;
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem;
 }
 
 .line-div {
   position: absolute;
-  height: 3px;
+  height: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,22 +83,22 @@ INTE är en optimal lösning för om tex man utökar med mer data så måste man
   background-color: #1f1e1e;
   border-radius: 50%;
   border: 2px solid white;
-  margin: 0rem 0.8rem;
+  margin: 0rem 0.9rem;
   color: white;
   font-weight: lighter;
   font-size: smaller;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   position: relative;
 }
 
 .empty {
   border-radius: 50%;
   border: 2px solid transparent !important;
-  margin: 0rem 0.8rem;
+  margin: 0rem 0.9rem;
   color: white;
   font-weight: bold;
   display: flex;
@@ -112,11 +113,12 @@ INTE är en optimal lösning för om tex man utökar med mer data så måste man
 @media (max-width:1040px){
 
   .chart-container {
-    width: 400x;
+    width: 550px;
+    padding-left: 2rem;
   }
 
   .spacer{
-    width: 15rem;
+    width: 13rem;
   }
 }
 
