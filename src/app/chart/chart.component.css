@@ -84,7 +84,7 @@
   margin: 0rem 0.7rem;
   color: white;
   font-weight: lighter;
-  font-size: smaller;
+  font-size: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +98,6 @@
   border: 2px solid transparent !important;
   margin: 0rem 0.7rem;
   color: white;
-  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
