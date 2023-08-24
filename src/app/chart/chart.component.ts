@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Framework, frameworks } from 'data';
 
@@ -14,6 +14,9 @@ export class ChartComponent{
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
+    //man kan sköta ju routingen i app.ts men eftersom det bara är chart-komponenten som är beroende
+    //av olika endpoints och olika datatyper så valde jag ändå att ha den här för läsbarheten och att
+    //se helheten av vad som sker med datan i komponenten
   ngOnInit(): void {
     // här prenumererar vi på ändringar i urlen och sätter datatype till nya param
     this.route.paramMap.subscribe(params => {

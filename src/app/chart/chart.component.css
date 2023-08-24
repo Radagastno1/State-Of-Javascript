@@ -3,7 +3,7 @@
   height: 85vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   position: relative;
   width: 650px;
@@ -16,30 +16,30 @@
   display: none;
 }
 .chart-container {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.years-container{
+.years-container {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
-.year-div{
+.year-div {
   margin: 0.5rem 0.7rem;
   color: rgb(245, 245, 245, 0.8);
 }
 
-.framework-container{
+.framework-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.row-div{
+.row-div {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -60,14 +60,14 @@
 
 /* jag förstår att denna lösningen att sätta en fast vidd för att få namnen att hamna utanför linjen
 INTE är en optimal lösning för om tex man utökar med mer data så måste man gå in och öka denna vidd.  */
-.spacer{
+.spacer {
   position: relative;
-  width: 13rem; 
+  width: 13rem;
 }
 
-.name-div{
+.name-div {
   flex: 1;
-  text-align: center; 
+  text-align: center;
   margin: 0rem 0.5rem;
   position: relative;
 }
@@ -79,6 +79,7 @@ INTE är en optimal lösning för om tex man utökar med mer data så måste man
   position: relative;
 }
 
+/* skapar cirkelformen i chart-cell elementet: */
 .data {
   background-color: #1f1e1e;
   border-radius: 50%;
@@ -109,42 +110,40 @@ INTE är en optimal lösning för om tex man utökar med mer data så måste man
   position: relative;
 }
 
-
-@media (max-width:1040px){
-
+@media (max-width: 1040px) {
   .chart-container {
     width: 550px;
     padding-left: 2rem;
   }
 
-  .spacer{
+  .spacer {
     width: 13rem;
   }
 }
 
-@media (max-width:768px){
-
+@media (max-width: 768px) {
   .chart-container {
     width: 300px;
   }
-  .spacer{
-    width: 7rem;  
+  .spacer {
+    width: 7rem;
   }
-  .data, .empty  {
+  .data,
+  .empty {
     margin: 0rem 0.22rem;
     width: 25px;
     height: 25px;
   }
 
-  .year-div{
+  .year-div {
     margin: 0.3rem;
     font-size: 10px;
   }
-  
-  .name-div, .data{
+
+  .name-div,
+  .data {
     font-size: 10px;
   }
-  
 }
 
 @media (max-height: 550px) {
