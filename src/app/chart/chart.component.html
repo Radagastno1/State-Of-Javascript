@@ -1,3 +1,4 @@
+  <!-- OBS om man formatterar så skrivs procenten ut med mellanrum och fastnar i testet! -->
 <div class="chart-container">
   <div class="years-container" data-cy="chart-header">
     <div class="year-div"></div>
@@ -11,14 +12,12 @@
     <div *ngFor="let framework of frameworkData">
       <div class="row-div" data-cy="chart-row">
         <div
-          class="name-div"
+          class="name-div-left"
           data-cy="chart-cell"
           [style.color]="framework.color"
         >
           <h4>{{ framework.name }}</h4>
         </div>
-
-        <div class="spacer"></div>
 
         <div
           class="line-div"
@@ -44,27 +43,19 @@
             </div>
           </div>
 
-          <!-- line diven -->
         </div>
-
-        <div class="spacer"></div>
-
         <div
-          class="name-div"
-          data-cy="chart-cell"
-          [style.color]="framework.color"
-        >
-          <h4>{{ framework.name }}</h4>
-        </div>
-
-        <!-- row diven -->
+        class="name-div-right"
+        data-cy="chart-cell"
+        [style.color]="framework.color"
+      >
+        <h4>{{ framework.name }}</h4>
       </div>
 
-      <!-- ngfor diven -->
+      </div>
+
     </div>
 
-    <!-- framework container -->
   </div>
 
-  <!-- chartcontainer -->
 </div>

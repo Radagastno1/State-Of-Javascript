@@ -1,15 +1,10 @@
 .chart-container {
   width: 100%;
-  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 650px;
-  overflow: auto;
-  white-space: nowrap;
-  padding-left: 1rem;
 }
 
 .chart-container::-webkit-scrollbar {
@@ -21,34 +16,49 @@
 }
 
 .years-container {
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .year-div {
-  margin: 0.5rem 0.7rem;
+  margin: 0.6rem 0.6rem;
   color: rgb(245, 245, 245, 0.8);
 }
 
 .framework-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .row-div {
-  display: inline-flex;
-  justify-content: center;
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 0.8rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  width: 500px;
+}
+
+.name-div-left, .name-div-right {
+  position: relative;
+  display: flex;
+  flex: 1;
+  font-size: 15px;
+}
+
+.name-div-left{
+  justify-content:flex-start;
+}
+.name-div-right{
+  justify-content: flex-end;
 }
 
 .line-div {
+  flex: 1;
   position: absolute;
   height: 2px;
   display: flex;
@@ -58,25 +68,12 @@
   z-index: -10;
 }
 
-/* jag förstår att denna lösningen att sätta en fast vidd för att få namnen att hamna utanför linjen
-INTE är en optimal lösning för om tex man utökar med mer data så måste man gå in och öka denna vidd.  */
-.spacer {
-  position: relative;
-  width: 13rem;
-}
-
-.name-div {
-  flex: 1;
-  text-align: center;
-  margin: 0rem 0.5rem;
-  position: relative;
-}
-
 .flex-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: relative;
+  width: auto;
 }
 
 /* skapar cirkelformen i chart-cell elementet: */
@@ -84,7 +81,7 @@ INTE är en optimal lösning för om tex man utökar med mer data så måste man
   background-color: #1f1e1e;
   border-radius: 50%;
   border: 2px solid white;
-  margin: 0rem 0.9rem;
+  margin: 0rem 0.7rem;
   color: white;
   font-weight: lighter;
   font-size: smaller;
@@ -99,7 +96,7 @@ INTE är en optimal lösning för om tex man utökar med mer data så måste man
 .empty {
   border-radius: 50%;
   border: 2px solid transparent !important;
-  margin: 0rem 0.9rem;
+  margin: 0rem 0.7rem;
   color: white;
   font-weight: bold;
   display: flex;
@@ -110,44 +107,15 @@ INTE är en optimal lösning för om tex man utökar med mer data så måste man
   position: relative;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 650px) {
   .chart-container {
-    width: 550px;
-    padding-left: 2rem;
+    width: 350px;
+    overflow: auto;
+    white-space: nowrap;
+    padding-left: 10rem;
   }
 
-  .spacer {
-    width: 13rem;
+  .row-div {
+    width: 500px;
   }
-}
-
-@media (max-width: 768px) {
-  .chart-container {
-    width: 300px;
-  }
-  .spacer {
-    width: 7rem;
-  }
-  .data,
-  .empty {
-    margin: 0rem 0.22rem;
-    width: 25px;
-    height: 25px;
-  }
-
-  .year-div {
-    margin: 0.3rem;
-    font-size: 10px;
-  }
-
-  .name-div,
-  .data {
-    font-size: 10px;
-  }
-}
-
-@media (max-height: 550px) {
-  .chart-container {
-    padding-top: 12rem;
-  }
-}
+} 

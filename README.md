@@ -48,11 +48,11 @@ för att rendera chart-komponenten beroende på url:en.
 Chart-komponenten är en smart component då den tex. hämtar data (framworks från data mappen),
 manipulerar datan genom funktionen som returnerar unika år baserat på datan. Chart-komponenten prenumerar också på ändringar i URL så den hanterar lite mer komplex routing. En viss enkel typ av tillståndshantering då den håller koll på dataType - värdet som ändras beroende på url (användarinteraktion typ då).
 
-Global css i style.css och sedan har varke komponent sin css-klass.
+Global css i style.css och sedan har varje komponent sin css-klass.
 ### Krav för Godkänt
 
-- [ ] Uppgiften har lämnats in i tid (Kod & Presentation).
-- [ ] Readmefilen har uppdaterats enligt beskrivning ovan.
+- [x] Uppgiften har lämnats in i tid (Kod & Presentation).
+- [x] Readmefilen har uppdaterats enligt beskrivning ovan.
 - [X] Git och GitHub har använts.
 - [X] Sidan innehåller en header, footer och main.
 - [X] Sidan är responsiv.
